@@ -12,15 +12,3 @@ client.on("ready", () => {
 });
 
 client.on("message", gotMessage);
-
-// client.on("message", (msg) => {});
-
-// client.on("message", (msg) => {});
-
-// client.on("message", (msg) => {
-//   if (msg.content === "banoite meo") {
-//     msg.content.reply(
-//       "Boa noitinha meo\ndorme bem tlg\n🦦(era uma otter)\n sorvete"
-//     );
-//   }
-// });

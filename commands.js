@@ -1,45 +1,22 @@
-import fetch from "node-fetch";
+import gif from "./commands/gif.js";
+import bullying from "./commands/bullying.js";
+import suzo from "./commands/suzo.js";
+import mork from "./commands/mork.js";
+import eba from "./commands/eba.js";
+import nabo from "./commands/nabo.js";
+
+const commands = { gif, mork, bullying, suzo, eba, nabo };
 
 export default async function gotMessage(msg) {
-  //   if (msg.channel.id == "832025286336970807") {
-  let gatinho = ["kitten", "cute kitten", "cat"];
-  let indexGatinho = Math.floor(Math.random() * gatinho.length);
-
   let token = msg.content.split(" ");
-  let url;
-
-  if (token[0] === "!gif") {
-    let keyword = token[1];
-
-    if (token.length > 1) {
-      keyword = token.slice(1, token.length).join(" ");
-    }
-
-    url = `https://g.tenor.com/v1/search?q=${keyword}&key=${process.env.GIFTOKEN}&ContentFilter=high`;
-  } else if (token[0] === "!gatinho") {
-    url = `https://g.tenor.com/v1/search?q=${gatinho[indexGatinho]}&key=${process.env.GIFTOKEN}&contentfilter=high`;
+  let command = token.shift();
+  let guildMember = msg.member;
+  if (guildMember.user.discriminator == "0406") {
+    let rand = Math.random() * 10;
+    rand <= 3 ? commands.mork(msg) : 0;
   }
-  let response = await fetch(url);
-  let json = await response.json();
-  let index = Math.floor(Math.random() * json.results.length);
-  msg.channel.send(json.results[index].url);
-  //   }
-  if (msg.content === "!ai") {
-    fetch("https://www.affirmations.dev")
-      .then((response) => response.json())
-      .then((q) => msg.channel.send(`pois é, ${q.affirmation}`));
-  } else if (msg.content === "!quote") {
-    fetch("https://animechan.vercel.app/api/random")
-      .then((response) => response.json())
-      .then((q) =>
-        msg.channel.send(
-          `${q.quote} \n- do zé mané ${q.character}, participação incrivel no anime ${q.anime}`
-        )
-      );
-    //   } else if (msg.content === "bjinho") {
-    //     msg.channel.send("bjinho");
-    //     // for (let index = 0; index < 10; index++) {
-    //     //   msg.channel.send("bjinho");
-    //     // }
+  if (command.charAt(0) === "!") {
+    command = command.substring(1);
+    commands[command](msg, token);
   }
 }
