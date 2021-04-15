@@ -12,8 +12,8 @@ export default async function gotMessage(msg) {
   let command = token.shift();
   let guildMember = msg.member;
   if (guildMember.user.discriminator == "0406") {
-    let rand = Math.random() * 10;
-    rand <= 3 ? commands.mork(msg) : 0;
+    let rand = Math.floor(Math.random() * 10);
+    rand <= 3 ? commands.bullying(msg) : 0;
   }
   if (command.charAt(0) === "!") {
     command = command.substring(1);
