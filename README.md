@@ -1,4 +1,4 @@
-# EBA-Discord-Bot ![Badge](https://img.shields.io/static/v1?label=Temaki&message=Divida-da-Suzy&color=B90E0A&style=flat&logo=jinja) ![Badge](https://img.shields.io/static/v1?label=Mork&message=Paredawn&color=FF8400&style=flat&logo=adblock) ![Badge](https://img.shields.io/static/v1?label=Nabo&message=NabofobicosBR&color=FFFFFF&style=flat&logo=raspberrypi) ![Badge](https://img.shields.io/static/v1?label=Babo&message=Babolove&color=29F1FB&style=flat&logo=riotgames) 
+# EBA-Discord-Bot ![Badge](https://img.shields.io/static/v1?label=Temaki&message=Divida-da-Suzy&color=B90E0A&style=flat&logo=jinja) ![Badge](https://img.shields.io/static/v1?label=Mork&message=Paredawn&color=FF8400&style=flat&logo=adblock) ![Badge](https://img.shields.io/static/v1?label=Nabo&message=NabofobicosBR&color=FFFFFF&style=flat&logo=torproject)
 ### EBA - Esquilo Bot Application
 EBA is a Discord Bot created to do some specifics commands on the Baboliven community, 
 also includes the use of a gif API, which you can use the gif command to show up some specific gifs requests.
