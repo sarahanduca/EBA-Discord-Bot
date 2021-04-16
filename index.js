@@ -5,10 +5,10 @@ import gotMessage from "./commands.js";
 dotenv.config();
 
 const client = new Discord.Client();
-client.login(process.env.BOTTOKEN);
 
 client.on("ready", () => {
   console.log("<3");
 });
+client.login(process.env.BOTTOKEN);
 
 client.on("message", gotMessage);
