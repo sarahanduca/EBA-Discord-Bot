@@ -21,7 +21,21 @@ export default function (msg) {
         name: "!nabo",
         value: "Entre para o grupo de nabofobicos 😗✌️",
         inline: true,
-      }
+      },
+      { name: "\u200B", value: "\u200B" },
+      { name: "!ocean", value: "Chama lá 🌊", inline: true },
+      {
+        name: "!jaca",
+        value: "Quue horas são? ⏰",
+        inline: true,
+      },
+      { name: "\u200B", value: "\u200B" },
+      {
+        name: "!bea",
+        value: "Escritora oficial da babo community📚",
+        inline: true,
+      },
+      { name: "!babo", value: "hmmm", inline: true }
     );
 
   msg.channel.send(embed);

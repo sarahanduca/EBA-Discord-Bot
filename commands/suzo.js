@@ -5,6 +5,6 @@ export default function (msg) {
     .setDescription(
       `Suzy ta devendo ${cont++} temakis 🍣 pra galera do discord 💖`
     )
-    .setColor(0xff69b4);
+    .setColor(0xb90e0a);
   msg.channel.send(embed);
 }

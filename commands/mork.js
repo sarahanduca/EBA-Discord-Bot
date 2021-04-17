@@ -5,6 +5,6 @@ export default function (msg) {
     .setDescription(
       `Mork 🙄 foi votado pro paredão ${cont++} vezes 🎉 (sai logo plmd)`
     )
-    .setColor(0xff781f);
+    .setColor(0x6441a5);
   msg.channel.send(embed);
 }
