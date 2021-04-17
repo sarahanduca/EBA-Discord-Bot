@@ -1,3 +1,4 @@
+import { MessageEmbed } from "discord.js";
 export default function (msg) {
   const embed = new MessageEmbed()
     .setDescription(`Ta na hora de dormir, lindo 😴`)

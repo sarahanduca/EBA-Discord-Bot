@@ -1,3 +1,4 @@
+import { MessageEmbed } from "discord.js";
 let url = "https://www.wattpad.com/story/266206201-livro-sem-nome";
 export default function (msg) {
   const embed = new MessageEmbed()
