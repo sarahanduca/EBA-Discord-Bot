@@ -7,7 +7,7 @@ import eba from "./commands/eba.js";
 import nabo from "./commands/nabo.js";
 
 dotenv.config();
-const commands = { gif, mork, bullying, suzo, eba, nabo, among };
+const commands = { gif, mork, bullying, suzo, eba, nabo };
 
 export default async function gotMessage(msg) {
   let token = msg.content.split(" ");
