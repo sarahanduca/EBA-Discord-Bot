@@ -19,7 +19,7 @@ export default function (msg) {
       { name: "!mork", value: "Bota o Mork no paredão, meo ❤️", inline: true },
       {
         name: "!nabo",
-        value: "Entre para o grupo de nabofobicos 😗✌️",
+        value: "Entre para o grupo de nabofóbicos 😗✌️",
         inline: true,
       },
       { name: "\u200B", value: "\u200B" },
