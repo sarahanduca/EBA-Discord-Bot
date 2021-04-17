@@ -5,7 +5,6 @@ import suzo from "./commands/suzo.js";
 import mork from "./commands/mork.js";
 import eba from "./commands/eba.js";
 import nabo from "./commands/nabo.js";
-import among from "./commands/among.js";
 
 dotenv.config();
 const commands = { gif, mork, bullying, suzo, eba, nabo, among };
