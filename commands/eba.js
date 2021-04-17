@@ -26,7 +26,7 @@ export default function (msg) {
       { name: "!ocean", value: "Chama lá 🌊", inline: true },
       {
         name: "!jaca",
-        value: "Quue horas são? ⏰",
+        value: "Que horas são? ⏰",
         inline: true,
       },
       { name: "\u200B", value: "\u200B" },
