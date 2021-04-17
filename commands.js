@@ -5,10 +5,10 @@ import suzo from "./commands/suzo.js";
 import mork from "./commands/mork.js";
 import eba from "./commands/eba.js";
 import nabo from "./commands/nabo.js";
-import nabo from "./commands/jaca.js";
-import nabo from "./commands/ocean.js";
-import nabo from "./commands/bea.js";
-import nabo from "./commands/babo.js";
+import jaca from "./commands/jaca.js";
+import ocean from "./commands/ocean.js";
+import bea from "./commands/bea.js";
+import babo from "./commands/babo.js";
 
 dotenv.config();
 const commands = {
