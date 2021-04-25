@@ -35,7 +35,8 @@ export default function (msg) {
         value: "Escritora oficial da babo community📚",
         inline: true,
       },
-      { name: "!babo", value: "hmmm", inline: true }
+      { name: "!babo", value: "hmmm", inline: true },
+      { name: "!bbb", value: "Horário pls ⏰", inline: true }
     );
 
   msg.channel.send(embed);

@@ -9,6 +9,8 @@ import jaca from "./commands/jaca.js";
 import ocean from "./commands/ocean.js";
 import bea from "./commands/bea.js";
 import babo from "./commands/babo.js";
+import BBB from "./commands/BBB.js";
+import bbb from "./commands/BBB.js";
 
 dotenv.config();
 const commands = {
@@ -22,15 +24,17 @@ const commands = {
   bea,
   jaca,
   babo,
+  BBB,
+  bbb,
 };
 
 export default async function gotMessage(msg) {
   let token = msg.content.split(" ");
   let command = token.shift();
   let guildMember = msg.member;
-  if (guildMember.user.discriminator == process.env.MORKTAG) {
+  if (guildMember.user.id == process.env.MORKTAG) {
     let rand = Math.floor(Math.random() * 10);
-    rand <= 5 ? commands.bullying(msg) : 0;
+    rand <= 3 ? commands.bullying(msg) : 0;
   }
   if (command.charAt(0) === "!") {
     command = command.substring(1);
