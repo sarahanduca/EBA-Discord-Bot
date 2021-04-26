@@ -1,12 +1,16 @@
 import fs from "fs";
 
+let nabs;
+let cont;
+let el;
 export default function (msg) {
-  let nabs;
-  let el;
   try {
     const jsonString = fs.readFileSync("commands/counter/count.json");
     const data = JSON.parse(jsonString);
     nabs = data.nabofobicos;
+    data.countNabo += 1;
+    cont = data.countNabo;
+
     let currUser = msg.member.user;
 
     if (
@@ -29,5 +33,5 @@ export default function (msg) {
     console.log(err);
   }
 
-  return nabs;
+  return { nabs, cont };
 }

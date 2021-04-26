@@ -11,10 +11,6 @@ export default function (fulano) {
         data.countMork += 1;
         i = data.countMork;
         break;
-      case "countNabo":
-        data.countNabo += 1;
-        i = data.countNabo;
-        break;
       case "countSuzo":
         data.countSuzo += 1;
         i = data.countSuzo;
