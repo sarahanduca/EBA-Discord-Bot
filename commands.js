@@ -37,7 +37,11 @@ export default async function gotMessage(msg) {
     rand <= 3 ? commands.bullying(msg) : 0;
   }
   if (command.charAt(0) === "!") {
-    command = command.substring(1);
-    commands[command](msg, token);
+    try {
+      command = command.substring(1);
+      commands[command](msg, token);
+    } catch (err) {
+      console.error("Not a command");
+    }
   }
 }
