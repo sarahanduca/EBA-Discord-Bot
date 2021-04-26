@@ -12,7 +12,7 @@ export default async function (msg) {
        ${count("countNabo")} membros 🎉`
       )
       .addFields({
-        name: "Membros: ",
+        name: "Membros:",
         value: localNabs.map((e) => e[1]),
         inline: true,
       })
