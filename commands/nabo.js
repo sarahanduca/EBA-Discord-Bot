@@ -8,7 +8,7 @@ export default async function (msg) {
   try {
     const embed = new MessageEmbed()
       .setDescription(
-        `✨ Hello diretamente do maior grupo de nabofóbicos do Brazel! ✨ \n 
+        `✨ Hello diretamente do maior grupo de nabofóbicos do Brazel! ✨ 
        ${count("countNabo")} membros 🎉`
       )
       .addFields({
