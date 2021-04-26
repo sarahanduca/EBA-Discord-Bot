@@ -1,11 +1,10 @@
 import { MessageEmbed } from "discord.js";
-import nabs from "./counter/nabofobicos.js";
+import count from "./counter/count.js";
 
-const nabofobicos = { nabs };
 export default async function (msg) {
-  let info = nabofobicos.nabs(msg);
+  let info = count("countNabo", msg);
+  let contNab = info.i;
   let localNabs = info.nabs;
-  let contNab = info.cont;
   try {
     const embed = new MessageEmbed()
       .setDescription(

@@ -1,7 +1,9 @@
 import fs from "fs";
+import nabofobicos from "./nabofobicos.js";
 
-export default function (fulano) {
+export default function (fulano, msg) {
   let i;
+  let nabs;
 
   try {
     const jsonString = fs.readFileSync("commands/counter/count.json");
@@ -16,6 +18,12 @@ export default function (fulano) {
         i = data.countSuzo;
         break;
 
+      case "countNabo":
+        data.countNabo += 1;
+        i = data.countNabo;
+        nabs = nabofobicos(msg, data.nabofobicos);
+        break;
+
       default:
         break;
     }
@@ -26,5 +34,5 @@ export default function (fulano) {
     console.log(err);
   }
 
-  return i;
+  return fulano == "countNabo" ? { i, nabs } : i;
 }
