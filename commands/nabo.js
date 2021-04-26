@@ -10,7 +10,7 @@ export default async function (msg) {
     const embed = new MessageEmbed()
       .setDescription(
         `✨ Hello diretamente do maior grupo de nabofóbicos do Brazel! ✨ 
-       ${contNab} membros 🎉`
+       Atualmente ${contNab} membros 🎉`
       )
       .addFields({
         name: "Membros: ",
