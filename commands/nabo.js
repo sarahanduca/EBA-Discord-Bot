@@ -5,6 +5,7 @@ import nabs from "./counter/nabofobicos.js";
 const nabofobicos = { nabs };
 export default async function (msg) {
   let localNabs = await nabofobicos.nabs(msg);
+  let contNab = await count("CountNabo");
   try {
     const embed = new MessageEmbed()
       .setDescription(

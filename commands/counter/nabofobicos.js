@@ -1,13 +1,12 @@
-import data from "./openFile.js";
-import close from "./closeFile.js";
+import fs from "fs";
 
-const fileConfig = { data, close };
 export default function (msg) {
   let nabs;
   let el;
-  let jsonData = fileConfig.data();
   try {
-    nabs = jsonData.nabofobicos;
+    const jsonString = fs.readFileSync("commands/counter/count.json");
+    const data = JSON.parse(jsonString);
+    nabs = data.nabofobicos;
     let currUser = msg.member.user;
 
     if (
@@ -22,7 +21,10 @@ export default function (msg) {
     } else {
       nabs.push([currUser.id, currUser.username]);
     }
-    fileConfig.close(jsonData);
+
+    fs.writeFile("commands/counter/count.json", JSON.stringify(data), (err) => {
+      if (err) console.log("Error writing file:", err);
+    });
   } catch (err) {
     console.log(err);
   }

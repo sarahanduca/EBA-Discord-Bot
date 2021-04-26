@@ -1,29 +1,31 @@
-import data from "./openFile.js";
-import close from "./closeFile.js";
+import fs from "fs";
 
-const fileConfig = { data, close };
 export default function (fulano) {
   let i;
-  let jsonData = fileConfig.data();
+
   try {
+    const jsonString = fs.readFileSync("commands/counter/count.json");
+    const data = JSON.parse(jsonString);
     switch (fulano) {
       case "countMork":
-        jsonData.countMork += 1;
-        i = jsonData.countMork;
+        data.countMork += 1;
+        i = data.countMork;
         break;
       case "countNabo":
-        jsonData.countNabo += 1;
-        i = jsonData.countNabo;
+        data.countNabo += 1;
+        i = data.countNabo;
         break;
       case "countSuzo":
-        jsonData.countSuzo += 1;
-        i = jsonData.countSuzo;
+        data.countSuzo += 1;
+        i = data.countSuzo;
         break;
 
       default:
         break;
     }
-    fileConfig.close(jsonData);
+    fs.writeFile("commands/counter/count.json", JSON.stringify(data), (err) => {
+      if (err) console.log("Error writing file:", err);
+    });
   } catch (err) {
     console.log(err);
   }
