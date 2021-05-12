@@ -1,4 +1,4 @@
-export default function (msg) {
+export default async function (msg) {
   const arr = [
     "blz 👍 mork faz silêncio ai",
     "calaboca mork",

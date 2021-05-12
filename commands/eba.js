@@ -36,7 +36,12 @@ export default function (msg) {
         inline: true,
       },
       { name: "!babo", value: "hmmm", inline: true },
-      { name: "!bbb", value: "Horário pls ⏰", inline: true }
+
+      {
+        name: "bora",
+        value: "Então bora. Escolhe ai: \nPedra [!r]\nPapel [!p]\nTesoura [!s]",
+        inline: true,
+      }
     );
 
   msg.channel.send(embed);

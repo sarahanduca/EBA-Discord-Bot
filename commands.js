@@ -9,8 +9,10 @@ import jaca from "./commands/jaca.js";
 import ocean from "./commands/ocean.js";
 import bea from "./commands/bea.js";
 import babo from "./commands/babo.js";
-import BBB from "./commands/BBB.js";
 import bbb from "./commands/BBB.js";
+import r from "./commands/paper.js";
+import p from "./commands/paper.js";
+import s from "./commands/paper.js";
 
 dotenv.config();
 const commands = {
@@ -24,8 +26,10 @@ const commands = {
   bea,
   jaca,
   babo,
-  BBB,
   bbb,
+  r,
+  p,
+  s,
 };
 
 export default async function gotMessage(msg) {
