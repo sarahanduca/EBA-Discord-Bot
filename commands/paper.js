@@ -45,7 +45,7 @@ export default function (msg) {
       break;
   }
   embed
-    .setDescription(`Hmmmm....: ${ebaChoice}! \n\n${ebaText}`)
+    .setDescription(`Hmmmm.... ${ebaChoice}! \n\n${ebaText}`)
     .setColor(0xe1ad01);
   msg.channel.send(embed);
 }
