@@ -5,11 +5,10 @@ import suzo from "./commands/suzo.js";
 import mork from "./commands/mork.js";
 import eba from "./commands/eba.js";
 import nabo from "./commands/nabo.js";
-import jaca from "./commands/jaca.js";
-import ocean from "./commands/ocean.js";
-import bea from "./commands/bea.js";
-import babo from "./commands/babo.js";
-import bbb from "./commands/BBB.js";
+import bea from "./commands/baboLovers.js";
+import jaca from "./commands/baboLovers.js";
+import ocean from "./commands/baboLovers.js";
+import babo from "./commands/baboLovers.js";
 import r from "./commands/paper.js";
 import p from "./commands/paper.js";
 import s from "./commands/paper.js";
@@ -23,10 +22,9 @@ const commands = {
   eba,
   nabo,
   ocean,
-  bea,
   jaca,
   babo,
-  bbb,
+  bea,
   r,
   p,
   s,

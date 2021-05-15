@@ -1,15 +1,15 @@
 export default function (msg, nabs) {
-  let el;
+  let sameUser;
   let currUser = msg.member.user;
 
   if (
-    nabs.some((e) => {
-      el = e;
-      return e[0] == currUser.id;
+    nabs.some((member) => {
+      sameUser = member;
+      return member[0] == currUser.id;
     })
   ) {
-    if (currUser.username != el[1]) {
-      el[1] = currUser.username;
+    if (currUser.username != sameUser[1]) {
+      sameUser[1] = currUser.username;
     }
   } else {
     nabs.push([currUser.id, currUser.username]);
