@@ -9,6 +9,7 @@ import bea from "./commands/baboLovers.js";
 import jaca from "./commands/baboLovers.js";
 import ocean from "./commands/baboLovers.js";
 import babo from "./commands/baboLovers.js";
+import sarah from "./commands/baboLovers.js";
 import r from "./commands/paper.js";
 import p from "./commands/paper.js";
 import s from "./commands/paper.js";
@@ -25,6 +26,7 @@ const commands = {
   jaca,
   babo,
   bea,
+  sarah,
   r,
   p,
   s,

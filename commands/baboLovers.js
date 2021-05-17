@@ -17,7 +17,7 @@ const bea = new Babolover(0xff69b4, `Lê o livrinho da Bea 💖 \n${url}`);
 const babo = new Babolover(0x00ffff, `CADÊ A BABOLIVE 🎥`);
 const ocean = new Babolover(0x10a5f5, `Cadê meu bolinho? 🍰`);
 const jaca = new Babolover(0x66a103, `Ta na hora de dormir, lindo 😴`);
-
+const sarah = new Babolover(0x98bf64, `Rummizada hoje? 🃏`);
 export default function (msg) {
   const keyWord = msg.content.split("");
   let embedMsgText;
@@ -41,6 +41,10 @@ export default function (msg) {
     case "jaca":
       embedMsgText = jaca.getText();
       embedMsgColor = jaca.getcolor();
+      break;
+    case "sarah":
+      embedMsgText = sarah.getText();
+      embedMsgColor = sarah.getcolor();
       break;
     default:
       console.log("Not a valid keyWord");
