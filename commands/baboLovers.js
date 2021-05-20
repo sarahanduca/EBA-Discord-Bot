@@ -50,6 +50,10 @@ export default function (msg) {
       embedMsgText = sarah.getText();
       embedMsgColor = sarah.getcolor();
       break;
+    case "ke":
+      embedMsgText = sarah.getText();
+      embedMsgColor = sarah.getcolor();
+      break;
     default:
       console.log("Not a valid keyWord");
       break;
