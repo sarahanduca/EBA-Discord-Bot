@@ -22,14 +22,19 @@ const ocean = new Babolover(0x10a5f5, `Cadê meu bolinho? 🍰`);
 const jaca = new Babolover(0x66a103, `Ta na hora de dormir, lindo 😴`);
 const sarah = new Babolover(0x98bf64, `Rummizada hoje? 🃏`);
 const ke = new Babolover(0xfcd12a, `👁️👄👁️`);
+
 export default function (msg) {
-  const keyWord = msg.content.split("");
+  const keyWord = msg.content;
   let embedMsgText;
   let embedMsgColor;
 
-  keyWord.shift();
+  if (keyWord != "ke") {
+    keyWord.split("");
+    keyWord.shift();
+    keyWord.join("");
+  }
 
-  switch (keyWord.join("")) {
+  switch (keyWord) {
     case "babo":
       embedMsgText = babo.getText();
       embedMsgColor = babo.getcolor();

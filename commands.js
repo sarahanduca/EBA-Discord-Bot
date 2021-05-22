@@ -35,8 +35,11 @@ const commands = {
 };
 
 export default async function gotMessage(msg) {
-  let token = msg.content.split(" ");
-  let command = token.shift();
+  let msgContent = msg.content;
+  msgContent == "ke" ? commands.ke(msg) : 0;
+
+  msgContent = msgContent.split(" ");
+  let command = msgContent.shift();
   let guildMember = msg.member;
   if (guildMember.user.id == process.env.MORKTAG) {
     let rand = Math.floor(Math.random() * 10);
@@ -45,7 +48,7 @@ export default async function gotMessage(msg) {
   if (command.charAt(0) === "!") {
     try {
       command = command.substring(1);
-      commands[command](msg, token);
+      commands[command](msg, msgContent);
     } catch (err) {
       console.error("Not a command");
     }
