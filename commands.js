@@ -36,10 +36,7 @@ const commands = {
 
 export default async function gotMessage(msg) {
   let msgContent = msg.content.split(" ");
-  console.log(msgContent);
   let command = msgContent[0];
-  console.log(msgContent);
-  console.log(command);
 
   let guildMember = msg.member;
   if (guildMember.user.id == process.env.MORKTAG) {
